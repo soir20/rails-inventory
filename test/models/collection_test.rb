@@ -23,7 +23,7 @@ class CollectionTest < ActiveSupport::TestCase
 
   test "cannot create collection with name much longer than 255 characters" do
     collection = Collection.new
-    collection.name = "a" * 1255
+    collection.name = "a" * 1_255
     collection.description = "description"
     assert_not collection.save
   end
@@ -63,8 +63,8 @@ class CollectionTest < ActiveSupport::TestCase
 
     collection2 = Collection.new
     collection2.name = "name"
-    collection.description = "other description"
-    assert_not collection.save
+    collection2.description = "other description"
+    assert_not collection2.save
   end
 
   test "create two collections with the same description" do
@@ -95,13 +95,13 @@ class CollectionTest < ActiveSupport::TestCase
     collection = Collection.new
     collection.name = "á, é, í, ó, ú, ü, ñ, ¿, ¡"
     collection.description = "description"
-    assert_not collection.save
+    assert collection.save
   end
 
   test "create collection with non-ASCII description" do
     collection = Collection.new
     collection.name = "name"
     collection.description = "á, é, í, ó, ú, ü, ñ, ¿, ¡"
-    assert_not collection.save
+    assert collection.save
   end
 end
