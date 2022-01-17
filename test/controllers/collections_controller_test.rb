@@ -16,8 +16,11 @@ class CollectionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create collection" do
+    desc = 'description'
+    unique_name = 'unique name'
+
     assert_difference("Collection.count") do
-      post collections_url, params: { collection: { description: @collection.description, name: @collection.name } }
+      post collections_url, params: { collection: { description: desc, name: unique_name } }
     end
 
     assert_redirected_to collection_url(Collection.last)
