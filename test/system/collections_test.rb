@@ -11,11 +11,15 @@ class CollectionsTest < ApplicationSystemTestCase
   end
 
   test "should create collection" do
+    unique_collection = Collection.new
+    unique_collection.name = "unique name"
+    unique_collection.description = "unique description"
+
     visit collections_url
     click_on "New collection"
 
-    fill_in "Description", with: @collection.description
-    fill_in "Name", with: @collection.name
+    fill_in "Description", with: unique_collection.description
+    fill_in "Name", with: unique_collection.name
     click_on "Create Collection"
 
     assert_text "Collection was successfully created"
