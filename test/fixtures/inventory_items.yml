@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  quantity: 1
+  unit_volume: 9.99
+  unit_weight: 9.99
+  is_frozen: false
+  is_fragile: false
+
+two:
+  name: MyString
+  description: MyText
+  quantity: 1
+  unit_volume: 9.99
+  unit_weight: 9.99
+  is_frozen: false
+  is_fragile: false

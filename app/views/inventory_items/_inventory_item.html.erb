@@ -1,0 +1,42 @@
+<div id="<%= dom_id inventory_item %>">
+  <p>
+    <strong>Name:</strong>
+    <%= inventory_item.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= inventory_item.description %>
+  </p>
+
+  <p>
+    <strong>Quantity:</strong>
+    <%= inventory_item.quantity %>
+  </p>
+
+  <p>
+    <strong>Unit volume:</strong>
+    <%= inventory_item.unit_volume %>
+  </p>
+
+  <p>
+    <strong>Unit weight:</strong>
+    <%= inventory_item.unit_weight %>
+  </p>
+
+  <p>
+    <strong>Is frozen:</strong>
+    <%= inventory_item.is_frozen %>
+  </p>
+
+  <p>
+    <strong>Is fragile:</strong>
+    <%= inventory_item.is_fragile %>
+  </p>
+
+  <p>
+    <strong>Collection:</strong>
+    <%= inventory_item.collection_name || "(none)" %>
+  </p>
+
+</div>

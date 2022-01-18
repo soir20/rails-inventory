@@ -10,13 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_15_031808) do
+ActiveRecord::Schema.define(version: 2022_01_17_052800) do
 
   create_table "collections", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "inventory_items", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "quantity"
+    t.decimal "unit_volume", precision: 20, scale: 4
+    t.decimal "unit_weight", precision: 20, scale: 4
+    t.boolean "is_frozen", default: false
+    t.boolean "is_fragile", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "collection_id"
   end
 
 end
