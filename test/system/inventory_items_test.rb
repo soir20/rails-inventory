@@ -21,6 +21,7 @@ class InventoryItemsTest < ApplicationSystemTestCase
     fill_in "Quantity", with: @inventory_item.quantity
     fill_in "Unit volume", with: @inventory_item.unit_volume
     fill_in "Unit weight", with: @inventory_item.unit_weight
+    select @inventory_item.collection_id, from: "Collection" unless @inventory_item.collection_id.nil?
     click_on "Create Inventory item"
 
     assert_text "Inventory item was successfully created"
@@ -38,6 +39,7 @@ class InventoryItemsTest < ApplicationSystemTestCase
     fill_in "Quantity", with: @inventory_item.quantity
     fill_in "Unit volume", with: @inventory_item.unit_volume
     fill_in "Unit weight", with: @inventory_item.unit_weight
+    select @inventory_item.collection_id, from: "Collection" unless @inventory_item.collection_id.nil?
     click_on "Update Inventory item"
 
     assert_text "Inventory item was successfully updated"

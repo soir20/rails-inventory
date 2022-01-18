@@ -8,6 +8,7 @@ one:
   unit_weight: 9.99
   is_frozen: false
   is_fragile: false
+  collection_id: <%= Collection.pluck(:id) %>
 
 two:
   name: MyString
