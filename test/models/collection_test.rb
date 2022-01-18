@@ -7,6 +7,13 @@ class CollectionTest < ActiveSupport::TestCase
     assert_not collection.save
   end
 
+  test "cannot create collection with blank name" do
+    collection = Collection.new
+    collection.name = "    "
+    collection.description = "description"
+    assert_not collection.save
+  end
+
   test "create collection with name exactly 255 characters" do
     collection = Collection.new
     collection.name = "a" * 255
@@ -31,6 +38,13 @@ class CollectionTest < ActiveSupport::TestCase
   test "cannot create collection without description" do
     collection = Collection.new
     collection.name = "name"
+    assert_not collection.save
+  end
+
+  test "cannot create collection with blank description" do
+    collection = Collection.new
+    collection.name = "name"
+    collection.description = "    "
     assert_not collection.save
   end
 
