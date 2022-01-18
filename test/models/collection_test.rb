@@ -75,8 +75,8 @@ class CollectionTest < ActiveSupport::TestCase
 
     collection2 = Collection.new
     collection2.name = "other name"
-    collection.description = "description"
-    assert collection.save
+    collection2.description = "description"
+    assert collection2.save
   end
 
   test "create two collections with different names and descriptions" do
