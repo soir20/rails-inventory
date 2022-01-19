@@ -25,7 +25,7 @@ class InventoryItemsTest < ApplicationSystemTestCase
     click_on "Create Inventory item"
 
     assert_text "Inventory item was successfully created"
-    click_on "Back"
+    click_on "Back to inventory items"
   end
 
   test "should update Inventory item" do
@@ -43,7 +43,7 @@ class InventoryItemsTest < ApplicationSystemTestCase
     click_on "Update Inventory item"
 
     assert_text "Inventory item was successfully updated"
-    click_on "Back"
+    click_on "Back to inventory items"
   end
 
   test "should destroy Inventory item" do
