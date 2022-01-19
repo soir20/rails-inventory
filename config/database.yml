@@ -25,6 +25,8 @@ production:
   <<: *default
   adapter: postgresql
   database: <%= ENV['PROD_DB_NAME'] %>
-  username: <%= ENV['PROD_DB_USER'] %>
-  password: <%= ENV['PROD_DB_PASS'] %>
-  host: localhost
+
+  # Uncomment this if you want to run the production DB locally
+  # username: <%= ENV['PROD_DB_USER'] %>
+  # password: <%= ENV['PROD_DB_PASS'] %>
+  # host: localhost
