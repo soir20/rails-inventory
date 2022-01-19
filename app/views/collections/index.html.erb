@@ -8,6 +8,12 @@
     <p>
       <%= link_to "Show this collection", collection %>
     </p>
+
+    <h3>Items in <%= collection.name %></h3>
+    <% collection.inventory_items.each do |item| %>
+      <%= render item %>
+    <% end %>
+    <hr>
   <% end %>
 </div>
 
