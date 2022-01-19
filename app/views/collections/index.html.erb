@@ -16,6 +16,9 @@
     <h3>Items in <%= collection.name %></h3>
     <% collection.inventory_items.each do |item| %>
       <%= render item %>
+      <p>
+        <%= link_to "Show this inventory item", item %>
+      </p>
       <p>-----</p>
     <% end %>
     <hr>
