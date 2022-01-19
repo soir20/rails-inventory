@@ -118,4 +118,26 @@ class CollectionTest < ActiveSupport::TestCase
     collection.description = "á, é, í, ó, ú, ü, ñ, ¿, ¡"
     assert collection.save
   end
+
+  test "deleting collection deletes associated items" do
+    collection = Collection.new
+    collection.name = "name"
+    collection.description = "description"
+    assert collection.save
+
+    item = InventoryItem.new
+    item.name = "name"
+    item.description = "description"
+    item.quantity = 1
+    item.unit_volume = 1.0
+    item.unit_weight = 1.0
+    item.is_frozen = false
+    item.is_fragile = false
+    item.collection_id = collection.id
+    assert item.save
+
+    assert_difference("InventoryItem.count", -1) do
+      collection.destroy
+    end
+  end
 end
