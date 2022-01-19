@@ -1,3 +1,7 @@
+<p>
+  <%= link_to "Back to home", root_path %>
+</p>
+
 <p style="color: green"><%= notice %></p>
 
 <h1>Collections</h1>
@@ -12,6 +16,7 @@
     <h3>Items in <%= collection.name %></h3>
     <% collection.inventory_items.each do |item| %>
       <%= render item %>
+      <p>-----</p>
     <% end %>
     <hr>
   <% end %>
