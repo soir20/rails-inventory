@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 2022_01_17_052800) do
     t.integer "quantity"
     t.decimal "unit_volume", precision: 20, scale: 4
     t.decimal "unit_weight", precision: 20, scale: 4
-    t.boolean "is_frozen", default: false
-    t.boolean "is_fragile", default: false
+    t.boolean "is_frozen"
+    t.boolean "is_fragile"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "collection_id"
