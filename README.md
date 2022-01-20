@@ -82,7 +82,7 @@ This section explains how to setup the Postgres production database.
 The development environment uses a simple SQLite database. If you want to skip this setup, run the app in development mode.
 
 ## Install Postgres
-See the [installation prerequisites](#Installation Prerequisites) for how to install Postgres.
+See the [installation prerequisites](#installation-prerequisites) for how to install Postgres.
 
 ## Create the Database
 You can skip this section if deploying to Heroku.
