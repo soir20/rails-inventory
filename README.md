@@ -117,7 +117,7 @@ You'll also need to grant the new user permissions to connect to and modify the 
 ```
 GRANT CONNECT ON DATABASE database_name TO user_name;
 GRANT CREATE, USAGE ON SCHEMA public TO user_name;
-GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO user_name;
 ```
 
 ## Update `pg_hba.conf`
