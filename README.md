@@ -1,6 +1,3 @@
-# Test the App
-The application is already running on [Heroku](https://intense-mesa-60485.herokuapp.com/). If the app has not been used for a while, it may take a few moments to start.
-
 You can:
 * create, read, update, and delete inventory items
 * create, read, update, and delete named collections of items
